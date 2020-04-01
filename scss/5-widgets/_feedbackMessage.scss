@@ -24,7 +24,7 @@
   padding-left: var(--space-base);
 }
 
-div.feedback-message{
+div.feedback-message {
   &-error {
     background-color: var(--color-error);
   }
@@ -98,5 +98,5 @@ div.feedback-message{
 
 /* $5.11 - Widgets - App Feedback */
 .ECT_FeedbackContainer div {
-  z-index:5000 !important; /* the AF stylesheet gets loaded after this */
+  z-index: 5000 !important; /* the AF stylesheet gets loaded after this */
 }

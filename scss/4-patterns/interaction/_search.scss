@@ -1,32 +1,168 @@
-/* $4.3.14 - Patterns - Interaction - Search */
+/* Search inside Right Header placeholder */
+.header-right .search {
+  background-color: transparent;
+  padding: 0;
+  position: static;
+}
+
+.header-right .search-preview {
+  display: block;
+}
+
+.header-right .search-glass {
+  display: inline-block;
+  height: 44px;
+  position: relative;
+  width: 40px;
+  -servicestudio--webkit-transform: translateY(-50%);
+}
+
+.header-right .search-round {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #fff;
+  height: 16px;
+  margin-top: -10px;
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transition: all 300ms ease;
+  width: 16px;
+}
+
+.header-right .search.open .search-glass .search-round {
+  border-radius: 0;
+  height: 24px;
+  right: 17px;
+  box-shadow: inset 0 0 0 3px #a6a6a6;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  width: 3px;
+}
+
+.header-right .search.open .search-glass .search-stick-bottom {
+  background-color: #a6a6a6;
+  height: 24px;
+  right: 17px;
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.header-right .search-stick-bottom {
+  background-color: #fff;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 12px;
+  top: 23px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: all 300ms ease;
+  width: 3px;
+}
+
+.header-right .search-input {
+  left: 0;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  transition: all 300ms ease;
+}
+
+.header-right .search.open .search-input {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.statusbar-overlay.ios .header-right .search-input:after {
+  top: 35px;
+}
+
+.statusbar-overlay.android .header-right .search-input:after {
+  top: 39px;
+}
+
+.header-right .search-input input[data-input],
+.header-right .search-input input[data-input]:empty {
+  height: 34px;
+  padding-left: 25px;
+  transition: none;
+}
+
+.header-right .search-input input[data-input]:focus {
+  border-bottom: 1px solid transparent;
+}
+
+.header-right .search-input:after {
+  color: #a6a6a6;
+  content: "\f002";
+  font: normal normal normal 14px/1 FontAwesome;
+  left: 13px;
+  position: absolute;
+  top: 15px;
+}
+
+.header-right .search-input ::-webkit-input-placeholder {
+  color: #b0bec5;
+}
+
+.slide-from-left-enter .header-right .search-input,
+.slide-from-left-leave .header-right .search-input,
+.slide-from-right-enter .header-right .search-input,
+.slide-from-right-leave .header-right .search-input,
+.slide-from-top-enter .header-right .search-input,
+.slide-from-top-leave .header-right .search-input,
+.slide-from-bottom-enter .header-right .search-input,
+.slide-from-bottom-leave .header-right .search-input,
+.fade-enter .header-right .search-input,
+.fade-leave .header-right .search-input {
+  display: none;
+}
+
+/* Global Search Header Content Usage */
+.header-content .search input[data-input],
+.header-content .search input[data-input]:empty {
+  height: 56px;
+  border-radius: 0;
+}
+
+.header-content .search-input:after {
+  top: 21px;
+}
+
+/* Global Search Normal Usage */
 .search {
   position: relative;
-
-  .form-control[data-input] { padding-left: var(--space-xl); }
-  
-  &:empty { -servicestudio-height: 40px; }
 }
 
-.search-input {
-  position: relative;
-
-  &:empty {
-    -servicestudio-height: 40px;
-    -servicestudio-background-color: #fff;
-    -servicestudio-border-radius: 4px;
-  }
-
-  &:after {
-    align-items: center;
-    color: var(--color-neutral-6);
-    content: "\f002";
-    display: flex;
-    font: normal normal normal 14px/1 FontAwesome;
-    height: 100%;
-    left: 16px;
-    position: absolute;
-    top: 0;
-  }
+.search-preview {
+  display: none;
 }
 
-.search-preview { display: none; }
+.search input[data-input],
+.search input[data-input]:empty {
+  border: 0;
+  padding-left: 35px;
+}
+
+.search:empty {
+  -servicestudio-height: 40px;
+}
+
+.search-input:empty {
+  -servicestudio-height: 40px;
+  -servicestudio-background-color: #fff;
+  -servicestudio-border-radius: 4px;
+}
+
+.search-input:after {
+  color: #a6a6a6;
+  content: "\f002";
+  font: normal normal normal 14px/1 FontAwesome;
+  left: 13px;
+  position: absolute;
+  top: 17px;
+}

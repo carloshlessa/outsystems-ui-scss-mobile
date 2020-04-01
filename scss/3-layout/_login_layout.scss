@@ -1,11 +1,9 @@
 /* ================================================================ */
 /*  $3.5 - Page Layout - Login                                      */
 /* ================================================================ */
-/* Login and Splash screens */
-.login-screen,
-.splash-screen {
-  background-color: #0097eb; /*primary-color*/
-  color: #fff;
+/* Login screen */
+.login-screen {
+  background-color: var(--color-primary); /*primary-color*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,86 +25,53 @@
   -ms-flex-pack: distribute;
   -webkit-justify-content: space-around;
   justify-content: space-around;
+
+  a,
+  a:visited,
+  a:link {
+    color: var(--color-neutral-0);
+    font-weight: bold;
+  }
+
+  input[data-input],
+  input[data-input]:focus,
+  input[data-input]:empty,
+  .animated-label-input input[data-input],
+  .animated-label-input input[data-input]:empty {
+    background: transparent;
+    border-bottom: 1px solid var(--color-neutral-0);
+    color: var(--color-neutral-0);
+  }
+
+  input.checkbox:before {
+    border: 1px solid transparent;
+  }
+
+  .validation-message {
+    color: var(--color-neutral-0);
+    margin-left: 0;
+  }
+
+  .animated-label-text {
+    color: var(--color-neutral-0);
+  }
+
+  .animated-label-input input[data-input]:focus {
+    border-bottom: 2px solid var(--color-neutral-0);
+  }
 }
 
-.login-screen a,
-.login-screen a:visited,
-.login-screen a:link {
-  color: #fff;
-  font-weight: bold;
-}
-
-.login-screen input[data-input],
-.login-screen input[data-input]:focus,
-.login-screen input[data-input]:empty,
-.login-screen .animated-label-input input[data-input],
-.login-screen .animated-label-input input[data-input]:empty {
-  background: transparent;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-}
-
-.login-screen .validation-message {
-  color: #fff;
-  margin-left: 0;
-}
-
-.login-screen .animated-label-text {
-  color: #fff;
-}
-
-.login-screen .animated-label-input input[data-input]:focus {
-  border-bottom: 2px solid #fff;
-}
-
-.splash-screen {
-  background-color: #0097eb; /*primary-color*/
-  color: #fff;
-}
-
-.splash-title,
-.splash-loading,
 .login-form {
   max-width: 320px;
   width: 100%;
   padding: 0 20px;
-}
-
-.splash-logo,
-.login-logo {
-  max-width: 240px;
-  text-align: center;
-}
-
-.OSLoaderContainer {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-}
-
-.OSLoadingBar {
-  background-color: #fff;
-  border-radius: 20px;
-  height: 6px;
-  margin-top: 10px;
-  transition: width 300ms ease;
-  width: 0;
-  -servicestudio-width: 42%;
-}
-
-.offline-data-sync {
-  -servicestudio-display: none;
-}
-
-.login-screen input.checkbox:before {
-  border: 1px solid transparent;
-}
-
-.login-form {
   -webkit-flex: 1;
   flex: 1;
 }
 
 .login-logo {
+  max-width: 240px;
+  text-align: center;
   -webkit-flex: 1;
   flex: 1;
   display: -webkit-box;
@@ -120,8 +85,20 @@
   align-items: center;
 }
 
+.login-screen input.checkbox:before {
+  border: 1px solid transparent;
+}
+
 .login-button {
   width: 100%;
+
+  .btn,
+  .btn:hover,
+  .btn:focus {
+    border-radius: 0;
+    height: 100%;
+    min-height: 60px;
+  }
 }
 
 .login-button > [data-block*="ButtonLoading"],
@@ -129,17 +106,28 @@
   -servicestudio-width: 100% !important;
 }
 
-.login-button .btn,
-.login-button .btn:hover,
-.login-button .btn:focus {
-  border-radius: 0;
-  height: 100%;
-  min-height: 60px;
-}
-
 .show-password {
   position: absolute;
   bottom: 10px;
   right: 0px;
   padding: 20px;
+}
+
+.OSLoaderContainer {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+
+.OSLoadingBar {
+  background-color: var(--color-neutral-0);
+  border-radius: 20px;
+  height: 6px;
+  margin-top: 10px;
+  transition: width 300ms ease;
+  width: 0;
+  -servicestudio-width: 42%;
+}
+
+.offline-data-sync {
+  -servicestudio-display: none;
 }
