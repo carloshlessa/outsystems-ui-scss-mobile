@@ -136,14 +136,15 @@
 @import "3-layout/page_layout";
 @import "3-layout/login_layout";
 @import "3-layout/splash_layout";
-/* @import "4-patterns/adaptive/_main_adaptive_imports";
+@import "4-patterns/adaptive/_main_adaptive_imports";
 @import "4-patterns/content/_main_content_imports";
 @import "4-patterns/interaction/_main_interaction_imports";
 @import "4-patterns/navigation/_main_navigation_imports";
 @import "4-patterns/numbers/_main_numbers_imports";
 @import "4-patterns/utilities/_main_utilities_imports";
-@import "5-widgets/_main_widgets.scss"; */
-/* @import "2-base/typography"; */
+@import "5-widgets/_main_widgets.scss";
+@import "2-base/typography";
+
 @import "2-base/colors";
 @import "2-base/space";
 @import "2-base/other_styles";
