@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/outsystems-ui.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div data-block="Interaction.AnimatedLabel">
+        <div data-container="" class="animated-label">
+          <div class="animated-label-text">
+            <i data-icon="" class="icon fa fa-user fa-1x" id="Icon1"></i
+            >Username
+          </div>
+          <div class="animated-label-input">
+            <span class="input-text"
+              ><input
+                type="text"
+                data-input=""
+                class="form-control OSFillParent"
+                required=""
+                maxlength="250"
+                style="user-select: auto;"
+            /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./animatedLabel.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Handler when the DOM is fully loaded
+        new AnimatedLabel();
+      });
+    </script>
+  </body>
+</html>
